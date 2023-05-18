@@ -1,6 +1,6 @@
 {
-  "query": "categories.main.id=1&brand.id[0]=9&year[0].gte=2011&indexName=auto&price.USD.lte=15000&photos.all.id.gte=1&size=100&abroad.not=0&custom.not=1",
-  "setDate": 1684166007058,
+  "query": "indexName=auto,order_auto,newauto_search&categories.main.id=1&brand.id[0]=9&year[0].gte=2011&body.id[0]=3&verified.VIN=1&price.USD.lte=15000",
+  "setDate": 1684352510,
   "watchStatus": true,
-  "queryOld": "category_id=1&marka_id[0]=9&model_id[0]=0&s_yers[0]=2011&indexName=auto&price_do=15000&currency=1&with_photo=1&countpage=100&abroad=2&custom=1&bannerNewAutoActive=false"
+  "queryOld": "indexName=auto,order_auto,newauto_search&category_id=1&marka_id[0]=9&model_id[0]=0&s_yers[0]=2011&bodystyle[0]=3&verified.VIN=1&price_do=15000&currency=1&bannerNewAutoActive=false"
 }

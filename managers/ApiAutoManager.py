@@ -10,7 +10,6 @@ class ApiAutoManager:
 
     def get_search_data(self, search_params):
         url = f"{self.search_url}?{search_params}&top=1&api_key={self.api_key}"
-        print(url)
         response = requests.get(url)
         data = json.loads(response.text)
         return data

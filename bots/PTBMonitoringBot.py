@@ -15,11 +15,10 @@ class PTBMonitoringBot:
         self.bot_helper = botHelper
         self.application = ApplicationBuilder().token(self.token).build()
         self.job_queue = self.application.job_queue
-        
         self.register_handlers()
-        self.start_monitoring()
         self.start_scraping()
         self.start_monitoring()
+        print(self.job_queue.jobs())
 
     async def start(self, update: Update, context: CallbackContext) -> None:
         chat_id = update.effective_chat.id
@@ -59,13 +58,13 @@ class PTBMonitoringBot:
     def start_monitoring(self):
 
         async def car_market_monitoring(context: CallbackContext):
-            print("Обработка всех подписок!")
+            print("Опрацювання всіх підписок!")
             accounts_manager = self.bot_helper.accounts_manager
             auto_manager = self.bot_helper.auto_manager
             price_predictor = self.bot_helper.price_predictor
             users = accounts_manager.get_users()
             for key in users:
-                print(f"Проверяем подписку пользователя №{key}")
+                print(f"Перевіряєм підписку користувача №{key}")
                 data = auto_manager.get_search_data(users[key]["queryOld"])
                 if len(data["result"]["search_result"]["ids"]) > 0:
                     print(data["result"]["search_result"]["ids"])

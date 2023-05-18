@@ -11,7 +11,7 @@ class BotHelper:
 
 
     def get_help(self):
-        help_text = 'Я експериментальний робот. Готовий допомогти вам відслідковувати будь-який пошуковий запит з сайту AUTO.RIA.com.' + "\n" \
+        help_text = 'Я експериментальний бот>. Готовий допомогти вам відслідковувати будь-який пошуковий запит з сайту AUTO.RIA.com.' + "\n" \
             'Раз на годину я буду переглядати ваш пошук і надсилати нові пропозиції з бази AUTO.RIA (якщо вони для вас з’являться).' + "\n\n" \
             'Я розумію наступні команди:' + "\n" \
             '  /start - Надішлю цей документ' + "\n" \
@@ -81,7 +81,7 @@ class BotHelper:
 
     def id_to_url(self, id):
         link = f'https://auto.ria.com/auto___{id}.html'
-        return link;
+        return link
 
     def url_to_id(self, url):
         pattern = r'https://auto\.ria\.com/uk/auto_[\w_]+_(\d+)\.html'

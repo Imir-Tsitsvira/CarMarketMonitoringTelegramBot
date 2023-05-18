@@ -28,13 +28,10 @@ class PricePredictor:
                     "owners": 2
         }
 
-        print(data["autoData"]["fuelName"])
         df = pd.DataFrame([car_data])
         prediction = self.model.predict(df)
 
         return prediction[0]
-
-
 
     def load_model(self, model_path):
         return joblib.load(model_path)
